@@ -124,9 +124,10 @@ int main()
     string path = "simplenums.csv";
     unsigned long arri=0;
     unsigned long* arr = readfile(path,arri);
-
-    for (int i = 0; i < 10; i++) {
-        step(path, arr, arri);
+    while (1) {
+        for (int i = 0; i < 10; i++) {
+            step(path, arr, arri);
+        }
+        writetofile(arr, path);
     }
-    writetofile(arr, path);
 }
